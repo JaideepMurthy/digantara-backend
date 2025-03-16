@@ -18,24 +18,24 @@ class BFSRequest(BaseModel):
     graph: dict[str, list[str]]
     start_node: str
 
-@router.post("/star-search")
-def search_space_object(request: BinarySearchRequest):
+@router.post("/binary-search")
+def binary_search(request: BinarySearchRequest):
     try:
         result = binary_search(request.arr, request.target)
         return {"algorithm": "Binary Search", "input": request.dict(), "output": result}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-@router.post("/trajectory-sort")
-def sort_trajectories(request: QuickSortRequest):
+@router.post("/quick-sort")
+def quick_sort(request: QuickSortRequest):
     try:
         result = quick_sort(request.arr)
         return {"algorithm": "Quick Sort", "input": request.dict(), "output": result}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-@router.post("/orbital-navigation")
-def navigate_orbit(request: BFSRequest):
+@router.post("/bfs")
+def bfs(request: BFSRequest):
     try:
         result = bfs(request.graph, request.start_node)
         return {"algorithm": "BFS", "input": request.dict(), "output": result}

@@ -36,45 +36,16 @@ app = FastAPI(
 # ✅ Include modular routers correctly
 from app.routes import binary_search, quick_sort, bfs, algorithms
 
-app.include_router(binary_search.router, prefix="/binary-search", tags=["Binary Search"])
-app.include_router(quick_sort.router, prefix="/quick-sort", tags=["Quick Sort"])
-app.include_router(bfs.router, prefix="/bfs", tags=["BFS"])
-app.include_router(algorithms.router)  # Include this only if needed
+app.include_router(binary_search.router, prefix="/api/v1", tags=["Binary Search"])
+app.include_router(quick_sort.router, prefix="/api/v1", tags=["Quick Sort"])
+app.include_router(bfs.router, prefix="/api/v1", tags=["BFS"])
+#app.include_router(algorithms.router)  # Include this only if needed
 
-@app.get("/", tags=["General"])
-def read_root():
+@app.get("/health", tags=["General"])
+def health():
     """Root Endpoint"""
     return {"message": "🚀 Welcome to Digantara Space API - Track & Monitor Space Objects!"}
 
-@app.post("/star-search", response_model=BinarySearchResponse, summary="Perform Binary Search", tags=["Algorithms"])
-def binary_search_endpoint(request: BinarySearchRequest):
-    """Binary Search API to find an element's index in a sorted array."""
-    result = binary_search(request.arr, request.target)
-    response = BinarySearchResponse(
-        index=result,
-        message=f"Object found at position {result}" if result != -1 else "Target not found."
-    )
-    log_api_call("Binary Search", request.dict(), response.dict())
-    return response
-
-@app.post("/trajectory-sort", response_model=QuickSortResponse, summary="Sort Array using QuickSort", tags=["Algorithms"])
-def quick_sort_endpoint(request: QuickSortRequest):
-    """QuickSort API to sort an array."""
-    sorted_arr = quick_sort(request.arr)
-    response = QuickSortResponse(sorted_array=sorted_arr)
-    log_api_call("Quick Sort", request.dict(), response.dict())
-    return response
-
-@app.post("/orbital-navigation", response_model=BFSResponse, summary="Perform BFS Traversal", tags=["Algorithms"])
-def bfs_endpoint(request: BFSRequest):
-    """Breadth-First Search (BFS) API for orbital path traversal."""
-    visited_order = bfs(request.graph, request.start_node)
-    response = BFSResponse(
-        visited_order=visited_order,
-        message="Orbital path traversed successfully"
-    )
-    log_api_call("BFS", request.dict(), response.dict())
-    return response
 
 @app.get("/logs", summary="Retrieve API Logs", tags=["Logging"])
 def get_logs():
