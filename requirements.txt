@@ -6,11 +6,11 @@ sqlite-utils
 python-dotenv
 gunicorn
 
-pip install -r requirements.txt
+# pip install -r requirements.txt
 
 
 # Windows
-venv\Scripts\activate
+# venv\Scripts\activate
 
 # Mac/Linux
-source venv/bin/activate
+# source venv/bin/activate
