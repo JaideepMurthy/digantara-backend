@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+sqlite-utils
+python-dotenv
+gunicorn
+
+pip install -r requirements.txt
+
+
+# Windows
+venv\Scripts\activate
+
+# Mac/Linux
+source venv/bin/activate

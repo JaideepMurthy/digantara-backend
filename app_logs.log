@@ -1,0 +1,8 @@
+2025-03-15 08:55:17,795 - ERROR - Exception: 1 validation error for BinarySearchResponse
+index
+  Input should be a valid integer [type=int_type, input_value={'index': 6, 'message': '...ct found at position 6'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/int_type | Path: /star-search
+2025-03-15 08:56:45,306 - ERROR - Exception: 1 validation error for BinarySearchResponse
+index
+  Input should be a valid integer [type=int_type, input_value={'index': 6, 'message': '...ct found at position 6'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/int_type | Path: /star-search
