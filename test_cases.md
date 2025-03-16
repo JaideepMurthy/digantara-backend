@@ -6,7 +6,6 @@ This document provides sample test cases for the API endpoints, including **Bina
 
 ## **1. Binary Search**  
 
- 
 ```http
 POST /binary-search
 
@@ -23,14 +22,12 @@ Expected Response:
   "index": 3,
   "message": "Target found at index 3"
 }
-
-
+```
 
 ---
 
 ## **2. Quick Sort**  
 
- 
 ```http
 POST /quick-sort
 
@@ -45,14 +42,12 @@ Expected Response:
 {
   "sorted_array": [1, 2, 3, 4, 5, 6, 7, 8]
 }
-
-
+```
 
 ---
 
 ## **3. Breadth-First Search**  
 
- 
 ```http
 POST /bfs
 
@@ -77,3 +72,5 @@ Expected Response:
   "path": ["A", "C", "F"],
   "message": "Path found"
 }
+```
+
