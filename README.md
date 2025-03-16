@@ -3,6 +3,9 @@
 ## Overview  
 The **Digantara Backend API** is a FastAPI-based project designed to demonstrate efficient **Data Structures & Algorithms (DSA)** implementations. This API provides endpoints for fundamental algorithms and includes logging, storage, and error handling mechanisms to enhance usability.  
 
+## Digantara Backend Developer Assignment
+![Assignment Screenshot](docs/assignment.png)
+
 ## Features  
 - **Algorithm Implementations**  
   - **Binary Search**: Searches for an element in a sorted list.  
