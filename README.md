@@ -37,22 +37,3 @@ Ensure you have the following installed:
 ```sh
 git clone https://github.com/JaideepMurthy/digantara-backend.git
 cd digantara-backend
-
-
-## Installation & Setup
-python -m venv venv
-source venv/bin/activate    On macOS/Linux
-venv\Scripts\activate       On Windows
-
-Install Dependencies - pip install -r requirements.txt
-Run the API Locally  - uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-
-The API will be available at: http://127.0.0.1:8000
-API Documentation: http://127.0.0.1:8000/docs
-
-
-## Contributing
-Feel free to open issues or submit pull requests for improvements.
-
-👨‍💻 Author: Jaideep Murthy
-📅 License: MIT
