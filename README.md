@@ -42,3 +42,10 @@ Ensure you have the following installed:
 ```sh
 git clone https://github.com/JaideepMurthy/digantara-backend.git
 cd digantara-backend
+```
+
+### **Testing the API**  
+To ensure the APIs are functioning as expected, refer to the test cases provided in the following link:  
+📌 **[Test Cases & Expected Outputs](https://github.com/JaideepMurthy/digantara-backend/blob/main/docs/testcase.txt)**  
+
+This file includes predefined inputs along with their expected outputs, allowing you to validate the accuracy and reliability of the implemented algorithms.
