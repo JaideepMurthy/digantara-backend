@@ -17,4 +17,7 @@ typing_extensions==4.12.2
 tzdata==2025.1
 uvicorn==0.34.0
 fastapi==0.115.11
-sqlalchemy==2.0.39.dist-info
+sqlalchemy==2.0.39
+#sqlite-utils==3.18.0
+python-dotenv==1.0.1
+gunicorn==23.0.0
